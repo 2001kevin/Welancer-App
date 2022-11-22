@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+html,
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  background-color: #f8f8fa;
+}
+ a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  /* background-color: #4640de ; */
+}
+
+.btn-register {
+  border: 1px solid #4640de;
+}
+
+
+.jumbotron-freelance {
+  width: 100%;
+  background-image: url(/assets/img/landing-page/Jumbotron-Looking-Freelancesvg.svg);
+}
+
+.jumbotron-title {
+  line-height: 4rem;
+  margin-top: 20px;
+}
+
+.jumbotron-description {
+  color: #9d9d9d;
+  line-height: 1.7rem;
+}
+
+.btn-hire {
+  background-color: #4640de;
+  font-size: 1.1rem;
+}
+
+.procedure-text {
+  color: #9d9d9d;
+}
+
+.offer-title {
+  line-height: 4rem;
+}
+
+.offer-title span {
+  color: #4640de;
+}
+
+.offer-description {
+  color: #9d9d9d;
+}
+
+.latest-description {
+  color: #9d9d9d;
+}
+
+.latest-title span {
+  color: #4640de;
+}
+
+.vector-right{
+    background-color: #4640de;
+}
+
+.card-text{
+    color: #9d9d9d;
+}
+
+.apply-link{
+    text-decoration: underline;
+    color: #4640de;
+    display: block;
+    margin-top: 10px;
+}
+
+.category-title span {
+  color: #4640de;
+}
+
+.background-category{
+    position: relative;
+}
+.overlay-category{
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.category-freelance{
+    position: absolute;
+    color: white;
+    z-index: 99;
+    top: 45%;
+    left: 30%;
+}
