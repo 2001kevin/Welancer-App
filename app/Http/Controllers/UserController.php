@@ -51,6 +51,9 @@ class UserController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
+         return back()->withErrors([
+            'password' => 'Wrong email or password',
+        ]);
     }
 
     public function logout(Request $request)

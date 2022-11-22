@@ -44,7 +44,7 @@
                                             </button>
                                         </div>
                                         <div class="col-md-12">
-                                            <p style="font-size:13px;" class="text-medium-emphasis text-center">Not Registered Yet? <a href="register.html" class="text-decoration-none">Sign Up</a></p>
+                                            <p style="font-size:13px;" class="text-medium-emphasis text-center">Not Registered Yet? <a href="{{ route('register') }}" class="text-decoration-none">Sign Up</a></p>
                                         </div>
                                     </form>
                                 </div>

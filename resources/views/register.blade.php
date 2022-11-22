@@ -19,19 +19,23 @@
                                 @csrf
                                 <div class="col-md-6">
                                     <label for="FirstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" placeholder="first name" name="first_name" id="FirstName" required>
+                                    <input type="text" class="form-control" placeholder="first name" 
+                                        name="first_name" id="FirstName" value="{{ old('first_name') }}" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="LastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="last name" name="last_name" id="LastName" required>
+                                    <input type="text" class="form-control" placeholder="last name" 
+                                        name="last_name" id="LastName" value="{{ old('last_name') }}" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="UserName" class="form-label">Username</label>
-                                    <input type="text" placeholder="username" name="username" class="form-control" id="UserName" required>
+                                    <input type="text" placeholder="username" name="username" 
+                                        class="form-control" id="UserName" value="{{ old('username') }}" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Email" class="form-label">Email</label>
-                                    <input type="email" placeholder="email" name="email" class="form-control" id="Email" required>
+                                    <input type="email" placeholder="email" name="email" 
+                                        class="form-control" id="Email" value="{{ old('email') }}" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Password" class="form-label">Password</label>
@@ -63,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6" style="font-size:13px;">
-                                    <p class="text-center">Already have account? <a href="login.html">Sign in</a></p>
+                                    <p class="text-center">Already have account? <a href="{{ route('login') }}">Sign in</a></p>
                                 </div>
                             </form>
 

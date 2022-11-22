@@ -13,6 +13,27 @@ html, body {
   outline: none;
 }
 
+.btn-logout{
+  color: #ffff;
+  background-color: #4640DE;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-logout:hover{
+  color: white;
+  background-color: #3e39c5;
+}
+
+.btn-user{
+  color: #ffff;
+  background-color: #4640DE;
+  padding: 8px;
+  border-radius: 8px;
+  border-style: hidden;
+}
+
 .screen-cover {
   position: fixed;
   top: 0;
