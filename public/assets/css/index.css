@@ -539,4 +539,8 @@ aside #toggle-navbar {
   font-size: 14px;
   line-height: 15px;
 }
-
+#btn{
+  margin : 0 0 10px 0;
+  height:40px;
+  width: 80px;
+}
