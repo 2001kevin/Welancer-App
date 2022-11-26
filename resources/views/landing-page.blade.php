@@ -112,14 +112,14 @@
     <div class="container mt-5">
       <div class="row d-flex justify-content-between pt-5">
         <div class="col-8">
-          <img
+          <img class="offering-image"
             src="./assets/img/landing-page/offer.svg"
             alt="offer"
             width="600"
             height="400"
           />
         </div>
-        <div class="col-4">
+        <div class="offering col-4">
           <div class="row">
             <h1 class="text-end offer-title">
               Find The Best <span>Freelancers</span> Here
@@ -467,76 +467,96 @@
     <!-- End of Portofolios -->
 
     <!-- Footer -->
-    <Footer class="container-fluid bg-white mt-5">
-      <div class="footer-info container pt-5">
-        <div class="row">
-          <div class="col-12 col-md-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="card-body d-flex flex-column justify-content-between align-items-start">
-                  <a class="navbar-brand pb-2" href="#">
-                    <img
-                      src="./assets/img/landing-page/LOGO WE LANCER.svg"
-                      alt="Welancer"
-                      height="40"
-                    />
-                  </a>
-                  <p class="card-text">Powerful Freelance Marketplace System with ability 
-                    to change the Users (Freelancers & Customers)
-                  </p>
-                  <div class="social-media d-flex" style="gap: 10px;">
-                    <button type="button" style="border: none; background-color: transparent;">
-                      <img src="./assets/img/landing-page/instagram.svg" alt="instagram" />
-                    </button>
-                    <button type="button" style="border: none; background-color: transparent;">
-                      <img src="./assets/img/landing-page/twitter.svg" alt="twitter" />
-                    </button>
-                    <button type="button" style="border: none; background-color: transparent;">
-                      <img src="./assets/img/landing-page/facebook.svg" alt="facebook" />
-                    </button>
-                  </div>
-                  
-                </div>
+    <footer>
+      <div class="first-footer container-fluid bg-white mt-5">
+        <div class="container pt-5">
+          <div class="footer-info row d-flex justify-content-around">
+            <div class="col-4">
+              <div class="row mb-3">
+                <a class="navbar-brand" href="#">
+                  <img
+                    src="./assets/img/landing-page/LOGO WE LANCER.svg"
+                    alt="Welancer"
+                    height="40"
+                  />
+                </a>
               </div>
-          </div>
-          <div class="col-12 col-md-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="footer-customer card-body d-flex flex-column justify-content-between align-items-start">
-                  <h5 class="card-title pb-3">For Customers</h5>
-                  <p class="card-text">Find Freelancers</p>
-                  <p class="card-text">Post Project</p>
-                  <p class="card-text">Refund Policy</p>
-                  <p class="card-text">Privacy Policy</p>
-                </div>
-              </div>
-          </div>
-          <div class="col-12 col-md-3">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="card-body d-flex flex-column justify-content-between align-items-start">
-                <h5 class="card-title pb-3">For Freelancers</h5>
-                <p class="card-text">Find Work</p>
-                <p class="card-text">Create Account</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-3">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="card-body d-flex flex-column justify-content-between align-items-start">
-                <h5 class="card-title pb-3">Call Us</h5>
-                <p class="card-text"><span><img src="./assets/img/landing-page/location.svg" alt="location"/></span>
-                  Indonesia
+              <div class="row">
+                <p>
+                  Powerful Freelance Marketplace System with ability to change the
+                  Users (Freelancers & Customers)
                 </p>
-                <p class="card-text"><span><img src="./assets/img/landing-page/phone.svg" alt="phone"/></span>+6230000000</p>
-                <p class="card-text"><span><img src="./assets/img/landing-page/email.svg" alt="email"/></span>welancer@gmail.com</p>
+              </div>
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn col-1 rounded-circle contact-button"
+                >
+                  <img src="./assets/img/find-freelancer/Instagram.svg" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="btn col-1 rounded-circle contact-button"
+                >
+                  <img src="./assets/img/find-freelancer/Twitter.svg" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="btn col-1 rounded-circle contact-button"
+                >
+                  <img src="./assets/img/find-freelancer/Facebook.svg" alt="" />
+                </button>
               </div>
             </div>
+            <div class="col-2 d-flex flex-column for-customer">
+                <h5 class="mb-4">Customers</h5>
+                <a href="#">Find Freelancers</a>
+                <a href="#">Post Project</a>
+            </div>
+            <div class="col-2 d-flex flex-column for-freelance">
+                <h5 class="mb-4">Freelance</h5>
+                <a href="#">Find Work</a>
+                <a href="#">Create Account</a>
+            </div>
+            <div class="col-2 d-flex flex-column call-us">
+                <h5 class="mb-4">Call Us</h5>
+                <div class="row">
+                  <div class="col-1">
+                    <img
+                      src="./assets/img/find-freelancer/carbon_location.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-10">
+                    <p>Indonesia</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                    <img src="./assets/img/find-freelancer/Call.svg" alt="" />
+                  </div>
+                  <div class="col-10">
+                    <p>+6281230000</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                    <img src="./assets/img/find-freelancer/Message.svg" alt="" />
+                  </div>
+                  <div class="col-10">
+                    <p>welancer@gmail.com</p>
+                  </div>
+                </div>
+            </div>
           </div>
-        </div>
-
-        <div class="footer-content mt-5 text-center p-3" style="color: #9D9D9D;">
-          Copyright &copy; 2022 Welancer. All right reserved
         </div>
       </div>
-    </Footer>
+      <div class="second-footer container-fluid bg-white">
+        <div class="text-center p-3" style="color: #9D9D9D;">
+          Copyright &copy; 2022 Welancer. All right reserved
+      </div>
+      </div>
+    </footer>
     <!-- End of Footer -->
 @endsection
     

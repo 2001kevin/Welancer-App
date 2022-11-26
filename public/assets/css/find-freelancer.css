@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+html,
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  background-color: #f8f8fa;
+}
+a {
+  text-decoration: none;
+  color: #9d9d9d;
+}
+
+/* Navbar */
+.find-freelance {
+  color: #4640de;
+}
+/* End of Navbar */
+
+/* Jumbotron Find Freelance */
+.jumbotron-find-freelance {
+  background-image: url(../../assets/img/find-freelancer/Rectangle\ 4.svg);
+  height: 400px;
+}
+
+.freelancer-title h1 {
+  font-weight: 700;
+}
+.freelancer-cover {
+  display: flex;
+}
+@media (max-width:800px) {
+  .freelancer-cover {
+    display: none;
+  }
+}
+
+.jumbotron-text {
+  color: #9d9d9d;
+  font-size: 24px;
+}
+.jumbotron-input {
+  font-style: italic;
+}
+@media (min-width:800px) {
+  .jumbotron-input {
+    width: 200px;
+  }
+}
+/* .search-icon {
+} */
+.search-button {
+  background-color: #4640de;
+  width: 50px;
+  height: 50px;
+}
+.filter-freelance {
+  background-color: #4640de;
+  color: #fff;
+}
+/* End of Find Freelancer */
+
+/* card freelance */
+.freelance-profile {
+  background-color: #f2fafa;
+  width: 100px;
+  height: 100px;
+}
+.freelance-category {
+  color: #4640de;
+}
+.freelance-bookmark {
+  width: 100px;
+  height: 100px;
+}
+.freelance-city {
+  color: #9d9d9d;
+}
+.vector-right {
+  background-color: #4640de;
+}
+/* End of Card Freelance */
+
+/* Footer */
+.contact-button {
+  background-color: #f2fafa;
+  height: 50px;
+  width: 50px;
+}
+
+.for-customer a {
+  font-weight: normal;
+  color: black;
+}
+.for-customer a:hover {
+  color: #4640de;
+}
+.for-freelance a {
+  font-weight: normal;
+  color: black;
+}
+.for-freelance a:hover {
+  color: #4640de;
+}
