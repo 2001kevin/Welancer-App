@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FreelanceController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,10 @@ Route::post('/login', [UserController::class, 'login_action'])->name('login.acti
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'register_action'])->name('register.action');
 
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/user', [AdminController::class, 'indexUser'])->name('admin.indexUser');
+
+Route::get('/admin/dashboard/freelancer', [FreelanceController::class, 'indexFreelance'])->name('admin.dashboard.freelance');
+Route::get('/admin/dashboard/freelancer/create', [FreelanceController::class, 'createFreelance'])->name('admin.dashboard.freelance.create');
 
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');

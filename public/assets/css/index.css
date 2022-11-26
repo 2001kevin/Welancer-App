@@ -111,9 +111,14 @@ aside #toggle-navbar {
 .sidebar-item.active {
   background: #4640DE;
 }
+.sidebar-item:hover {
+  background: #4640DE;
+  color: white;
+}
 .sidebar-item.active span {
   color: #fff;
 }
+
 .sidebar-item.active svg path {
   stroke: #fff;
 }

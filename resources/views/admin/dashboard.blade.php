@@ -1,6 +1,5 @@
 @extends('layouts.sidebar')
 @section('main')
-        <div class="col-12 col-xl-9">
             <div class="nav">
                 <div class="d-flex justify-content-between align-items-center w-100 mb-3 mb-md-0">
                     <div class="d-flex justify-content-start align-items-center">
@@ -274,6 +273,5 @@
 
             </div>
         </div>
-    </div>
         
 @endsection

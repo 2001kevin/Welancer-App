@@ -5,15 +5,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../assets/img/landing-page/LOGO WE LANCER.png" rel="icon" />
-
+    <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-    <link rel="stylesheet" href="../assets/css/index.css" />
-
-    <title>Welancer, {{ $title }}</title>
+    <title>Welancer | {{ $title }}</title>
 </head>
 
 <body>
@@ -25,7 +27,7 @@
             <div class="modal-header">
               
                 <img
-                src="../assets/img/landing-page/LOGO WE LANCER.svg"
+                src="{{ asset('assets/img/landing-page/LOGO WE LANCER.svg') }}"
                 alt="Welancer"
                 height="40"
               />
@@ -50,18 +52,19 @@
             <aside class="sidebar">
                 <a href="/" class="sidebar-logo">
                     <div class="d-flex justify-content-start align-items-center">
-                        <img src="../assets/img/global/logo.svg" alt="">
+                        <img src="{{ asset('assets/img/global/logo.svg') }}" alt="">
                         <span>Welancer</span>
                     </div>
 
                     <button id="toggle-navbar" onclick="toggleNavbar()">
-                        <img src="../assets/img/global/navbar-times.svg" alt="">
+                        <img src="{{ asset('assets/img/global/navbar-times.svg') }}" alt="">
                     </button>
                 </a>
 
                 <h5 class="sidebar-title">Daily Use</h5>
 
-                <a href="/" class="sidebar-item active" onclick="toggleActive(this)">
+                <a href="{{ route('admin.dashboard') }}" class="sidebar-item 
+                    {{ Request::is('admin/dashboard') ? 'active' : ''  }}" onclick="toggleActive(this)">
                     <!-- <img src="./assets/img/global/grid.svg" alt=""> -->
 
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +81,7 @@
                 <!-- <img src="./assets/img/global/users.svg" alt=""> -->
                  <!-- <a href="./employees.html" class="sidebar-item"> -->
           <!-- <img src="./assets/img/global/users.svg" alt=""> -->
-          <a href="crud-freelancer.html" class="sidebar-item" onclick="toggleActive(this)">
+          <a href="{{ route('admin.dashboard.freelance') }}" class="sidebar-item {{ Request::is('admin/dashboard/freelancer', 'admin/dashboard/freelancer/create') ? 'active' : '' }}" onclick="toggleActive(this)">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#ABB3C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               <path
@@ -101,7 +104,7 @@
             <span>Data Freelancer</span>
           </a>
 
-          <a href="crud-work.html" class="sidebar-item" onclick="toggleActive(this)">
+          <a href="#" class="sidebar-item" onclick="toggleActive(this)">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="#ABB3C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               <path
@@ -116,7 +119,7 @@
             <span>Data Work</span>
           </a>
 
-          <a href="crud-user.html" class="sidebar-item" onclick="toggleActive(this)">
+          <a href="{{ route('admin.indexUser') }}" class="sidebar-item {{ Request::is('admin/user') ? 'active' : '' }}" onclick="toggleActive(this)">
             <!-- <img src="./assets/img/global/dollar-sign.svg" alt=""> -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -147,11 +150,19 @@
             </aside>
 
         </div>
+        <div class="col-12 col-xl-9">
+          @yield('main')
+        </div>
 
-        @yield('main')
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script>
+      $(document).ready(function () {
+          $('#dataTable').DataTable();
+      });
+    </script> 
     <script>
         const navbar = document.querySelector('.col-navbar')
         const cover = document.querySelector('.screen-cover')
@@ -162,7 +173,7 @@
             navbar.classList.toggle('d-none')
             cover.classList.toggle('d-none')
         }
-
+        
         function toggleActive(e) {
             sidebar_items.forEach(function(v, k) {
                 v.classList.remove('active')
