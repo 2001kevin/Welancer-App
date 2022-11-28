@@ -70,7 +70,7 @@
                     <li><span class="dropdown-item-text"> <b> Welcome, {{ Auth::user()->username }}</b></span></li>
                     <li><hr class="dropdown-divider"></li>
                     @can('isAdmin')
-                      <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>                     
+                      <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>                     
                       @endcan
                       <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
                     </ul>

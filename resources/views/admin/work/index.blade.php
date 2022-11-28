@@ -1,6 +1,6 @@
 @extends('layouts.sidebar')
 @section('main')
-<!-- Modal Delete -->
+    <!-- Modal Delete -->
       <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -102,7 +102,7 @@
         <div class="card-header">
           <div class="d-flex align-items-center">
               <img src="{{ asset('assets/img/global/logo.svg') }}" alt="Welancer">
-              <span class="title-welancer ms-3">Welancer Freelance Data</span>
+              <span class="title-welancer ms-3">Welancer Work Data</span>
               <a href="{{ route('admin.dashboard.freelance.create') }}" class="button-create ms-auto p-2 bd-highlight">Create</a>
           </div>
         </div>

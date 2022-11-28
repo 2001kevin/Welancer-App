@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FreelanceController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,5 +33,7 @@ Route::get('/admin/user', [AdminController::class, 'indexUser'])->name('admin.in
 
 Route::get('/admin/dashboard/freelancer', [FreelanceController::class, 'indexFreelance'])->name('admin.dashboard.freelance');
 Route::get('/admin/dashboard/freelancer/create', [FreelanceController::class, 'createFreelance'])->name('admin.dashboard.freelance.create');
+
+Route::get('/admin/work', [WorkController::class, 'indexWork'])->name('admin.dashboard.work');
 
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
