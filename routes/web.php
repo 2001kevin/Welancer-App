@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('landing-page', ['title' => 'Home']);
 });
 
+Route::get('/find-freelancer', function () {
+    return view('find-freelancer', ['title' => 'Find Freelancer']);
+});
+
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'login_action'])->name('login.action');
 

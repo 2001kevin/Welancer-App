@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/landing-page.css" />
     <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/find-freelancer.css" />
   </head>
   <body>
 
@@ -58,7 +59,7 @@
           <div class="col-5 d-flex justify-content-center mt-2">
             <div class="col-3"><a href="/" class="home">Home</a></div>
             <div class="col-3"><a href="#">Find Work</a></div>
-            <div class="col-3"><a href="#">Find Freelance</a></div>
+            <div class="col-3"><a href="/find-freelancer">Find Freelance</a></div>
           </div>
           <div class="col-3 d-flex justify-content-end">
               @auth

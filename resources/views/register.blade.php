@@ -3,9 +3,9 @@
     <div class="register bg-light min-vh-100 d-flex flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-md-8">
                     <div class="card mb-4 mx-4 mt-4">
-                    <img src="./assets/img/global/cover2.svg" style="border-top-left-radius: 13px; border-top-right-radius: 15px;" class="card-img-top d-none d-lg-block"  alt="Backgorund Image">
+                        <img src="{{ asset('assets/img/global/cover2.svg') }}" style="border-top-left-radius: 13px; border-top-right-radius: 15px;" class="card-img-top d-none d-lg-block"  alt="Backgorund Image">
                         <div class="card-body py-5 px-5">
                             <div class="text-center">
                                 <h1><strong>Sign Up</strong></h1>
@@ -43,30 +43,20 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Password_C" class="form-label">Confirm Password</label>
-                                    <input type="password" placeholder="confirm passowrd" name="password_confirmation" class="form-control" id="Password_C" required>
+                                    <input type="password" placeholder="confirm password" name="password_confirmation" class="form-control" id="Password_C" required>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                                    <label class="form-check-label" for="gridCheck">
+                                    <label class="form-check-label" for="gridCheck" style="font-size:13px;">
                                         I agree with <a href="#">Privacy and Policy</a>
                                     </label>
                                     </div>
                                 </div>
                                 <div class="col-md-6 d-grid gap-2">
-                                    <button type="submit" class="sign-up">Sign Up</button>
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
                                 </div>
-                                <div class="col-md-6 d-flex align-items-center d-grid justify-content-center">
-                                    <div class="p-2">
-                                        <p class="text-medium-emphasis">or</p>
-                                    </div>
-                                    <div class="p-2">
-                                        <button class="sign-up-google" type="submit">
-                                            <img src="./assets/img/global/google.svg" alt="icon google"> Continue with Google
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6" style="font-size:13px;">
+                                <div class="col-md-6" style="font-size:13px; color: #828282;">
                                     <p class="text-center">Already have account? <a href="{{ route('login') }}">Sign in</a></p>
                                 </div>
                             </form>

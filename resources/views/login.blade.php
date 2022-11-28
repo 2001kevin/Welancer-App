@@ -1,8 +1,8 @@
 @extends('layouts.navbar')
 @section('main')
     
-<div class="login bg-light min-vh-100 d-flex flex-row align-items-center">
-    <div class="container">
+    <div class="login bg-light min-vh-100 d-flex flex-row align-items-center">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card mb-3">
@@ -33,18 +33,18 @@
                                         <div class="col-md-12">
                                             <label for="password" class="form-label">Password</label>
                                             <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password" placeholder="*********">
-                                            <a style="font-size:13px;" href="#" class="text-medium-emphasis text-decoration-none">Forgot Your Password?</a>
+                                            <a style="font-size:13px; color: #4640DE" href="#" class="text-medium-emphasis text-decoration-none">Forgot Your Password?</a>
                                         </div>
                                         <div class="col-md-12 d-grid gap-2">
-                                            <button type="submit" class="sign-in">Login</button>
+                                            <button type="submit" class="btn btn-primary">Login</button>
                                         </div>
-                                        <div class="col-md-12 d-flex align-items-center d-grid gap-2 justify-content-center">
+                                        <div class="col-md-12 d-flex align-items-center d-grid gap-2 justify-content-center mt-2">
                                             <button class="sign-in-google d-flex justify-content-center align-items-center" type="submit">
                                                 <img src="./assets/img/global/google.svg" alt="icon google">Continue with Google
                                             </button>
                                         </div>
                                         <div class="col-md-12">
-                                            <p style="font-size:13px;" class="text-medium-emphasis text-center">Not Registered Yet? <a href="{{ route('register') }}" class="text-decoration-none">Sign Up</a></p>
+                                            <p style="font-size:13px; color: #828282" class="text-medium-emphasis text-center">Not Registered Yet? <a href="{{ route('register') }}" class="text-decoration-none">Sign Up</a></p>
                                         </div>
                                     </form>
                                 </div>
