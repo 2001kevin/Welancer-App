@@ -311,6 +311,14 @@ aside #toggle-navbar {
   width: 18px;
   height: 18px;
 }
+
+.card{
+  border-radius: 26px;
+}
+
+.card-header{
+  border-radius: 26px;
+}
 .statistics-icon span {
   font-weight: 600;
   font-size: 12px;

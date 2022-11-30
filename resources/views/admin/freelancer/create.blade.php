@@ -10,22 +10,23 @@
                                     <h1><strong>Add Data Freelancer</strong></h1>
                                 </div>
     
-                                <form action="" method="POST" class="row sign-up-form form g-3">
-                                  <div class="col-md-6">
+                                <form action="{{ route('admin.dashboard.freelance.store') }}" method="POST" class="row sign-up-form form g-3" enctype="multipart/form-data">
+                                  @csrf
+                                    <div class="col-md-6">
                                       <label for="Name" class="form-label">Name</label>
-                                      <input type="text" class="form-control" placeholder="Name" name="name" id="Name" required>
+                                      <input type="text" class="form-control" placeholder="Name" name="name" id="name" required>
                                   </div>
                                   <div class="col-md-6">
                                       <label for="Cattegory" class="form-label">Project Cattegory</label>
-                                      <select name="select" id="form-select" class="form-select">
+                                      <select name="cattegory" id="form-select" class="form-select">
                                         <option >Select Project Cattegory</option>
-                                        <option value="">Graphic Design</option>
-                                        <option value="">Cartoon Animation</option>
-                                        <option value="">Fotografer</option>
-                                        <option value="">Flyers & Vouchers</option>
-                                        <option value="">Logo Design</option>
-                                        <option value="">Content Planner</option>
-                                        <option value="">Website Design</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                        <option value="Cartoon Animation">Cartoon Animation</option>
+                                        <option value="Fotografer">Fotografer</option>
+                                        <option value="Flyers & Vouchers">Flyers & Vouchers</option>
+                                        <option value="Logo Design">Logo Design</option>
+                                        <option value="Content Planner">Content Planner</option>
+                                        <option value="Website Design">Website Design</option>
                                       </select>
                                   </div>
                                   <div class="col-md-6">
@@ -42,12 +43,16 @@
                                   </div>
                                   <div class="col-md-6">
                                       <label for="LinkedIn" class="form-label">Link LinkedIn</label>
-                                      <input type="text" placeholder="LinkedIn" name="LinkedIn" class="form-control" id="linkedin" required>
+                                      <input type="text" placeholder="LinkedIn" name="linkedin" class="form-control" id="linkedin" required>
                                   </div>
                                   <div class="col-md-6">
                                     <label for="Instagram" class="form-label">Link Instagram</label>
-                                    <input type="text" placeholder="Instagram" name="Instagram" class="form-control" id="instagram" required>
-                                </div>
+                                    <input type="text" placeholder="Instagram" name="instagram" class="form-control" id="instagram" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="Image" class="form-label">Photo</label>
+                                    <input type="file" placeholder="Photo" name="photo" class="form-control" id="photo" required>
+                                  </div>
                                   <div class="col-md-6 d-grid gap-2">
                                       <button type="submit" class="button-submit">Submit</button>
                                   </div>

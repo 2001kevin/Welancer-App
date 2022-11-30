@@ -58,7 +58,7 @@
           </div>
           <div class="col-5 d-flex justify-content-center mt-2">
             <div class="col-3"><a href="/" class="home">Home</a></div>
-            <div class="col-3"><a href="#">Find Work</a></div>
+            <div class="col-3"><a href="{{ route('find.Work') }}">Find Work</a></div>
             <div class="col-3"><a href="/find-freelancer">Find Freelance</a></div>
           </div>
           <div class="col-3 d-flex justify-content-end">

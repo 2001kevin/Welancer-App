@@ -30,6 +30,10 @@ class User extends Authenticatable
         'role',
     ];
 
+    public function freelance(){
+        return $this->hasMany(freelance::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
