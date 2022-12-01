@@ -3,7 +3,7 @@
     <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div class="card mb-4 mx-4 mt-4">
+                    <div class="card mb-4 mx-4 mt-4 border-0 shadow">
                     <img src="{{ asset('assets/img/global/cover2.svg') }}" style="border-top-left-radius: 13px; border-top-right-radius: 15px;" class="card-img-top d-none d-lg-block"  alt="Backgorund Image">
                         <div class="card-body py-5 px-5">
                             <div class="text-center">
@@ -53,7 +53,7 @@
                                     <label for="Image" class="form-label">Photo</label>
                                     <input type="file" placeholder="Photo" name="photo" class="form-control" id="photo" required>
                                   </div>
-                                  <div class="col-md-6 d-grid gap-2">
+                                  <div class="col d-grid gap-2">
                                       <button type="submit" class="button-submit">Submit</button>
                                   </div>
                               </form>

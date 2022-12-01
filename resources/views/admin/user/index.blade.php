@@ -63,7 +63,6 @@
                     <td>{{ $user->role }}</td>
                     <td>
                       <button class="button-edit" data-bs-toggle="modal" data-bs-target="#updateFreelancer-{{ $user->user_id }}"><i class="fas fa-pencil-alt"></i></button>
-                      <button class="button-delete"><i class="fas fa-times" data-bs-toggle="modal" data-bs-target="#deleteModal"></i></button>
                     </td>
                   </tr>                  
                   @endforeach
@@ -71,6 +70,7 @@
               </table>
             </div>
           </div>
+          
         <!-- update -->
         @foreach ($users as $user)
          <div class="modal fade " id="updateFreelancer-{{ $user->user_id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
