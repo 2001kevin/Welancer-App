@@ -43,6 +43,7 @@ Route::get('/admin/dashboard/freelancer/create', [FreelanceController::class, 'c
 Route::post('/admin/dashboard/freelancer/store', [FreelanceController::class, 'storeFreelance'])->name('admin.dashboard.freelance.store');
 Route::post('/admin/dashboard/freelancer/update/{id}', [FreelanceController::class, 'updateFreelance'])->name('admin.dashboard.freelance.update');
 Route::post('/admin/dashboard/freelancer/delete/{freelance}', [FreelanceController::class, 'deleteFreelance'])->name('admin.dashboard.freelance.delete');
+Route::get('/find-freelancer', [FreelanceController::class, 'findFreelance'])->name('find-freelancer');
 
 
 Route::get('/admin/work', [WorkController::class, 'indexWork'])->name('admin.dashboard.work');
