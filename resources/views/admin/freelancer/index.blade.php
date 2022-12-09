@@ -42,8 +42,8 @@
                   <td>{{ Str::limit($fr->cattegory, 10) }}</td>
                   <td>{{ $fr->experience }}</td>
                   <td>{{ Str::limit($fr->email, 10) }}</td>
-                  <td>{{ $fr->linkedin }}</td>
-                  <td>{{ $fr->instagram }}</td>
+                  <td>{{ Str::limit($fr->linkedin,10 )}}</td>
+                  <td>{{ Str::limit($fr->instagram,10) }}</td>
                   <td>
                     <button class="button-edit" data-bs-toggle="modal" data-bs-target="#updateFreelancer-{{ $fr->freelance_id }}"><i class="fas fa-pencil-alt"></i></button>
                     <button class="button-delete"><i class="fas fa-times" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $fr->freelance_id }}"></i></button>
