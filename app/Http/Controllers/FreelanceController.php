@@ -102,9 +102,17 @@ class FreelanceController extends Controller
         DB::table('freelances')->where('freelance_id', $freelance->freelance_id)->delete();
         return redirect('/admin/dashboard/freelancer');
     }
-     public function findFreelance(Request $request){
+
+    public function findFreelance(Request $request){
+        $data['title'] = 'Find Freelance';
         $keyword = $request->keyword;
         $freelancers = freelance::where('name', 'LIKE', '%' . $keyword. '%')->paginate(5);
-        return view('find-freelancer', compact('freelancers'));
+        return view('find-freelancer', $data, compact('freelancers'));
+    }
+
+    public function indexFindFreelance(){
+        $freelancers = DB::table('freelances')->get();
+        $data['title'] = 'Find Freelance';
+        return view('find-freelancer',$data, compact('freelancers'));
     }
 }

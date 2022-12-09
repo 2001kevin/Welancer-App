@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
-    <title>Welancer | {{ $title }}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset('assets/css/landing-page.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/find-freelancer.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/find-work.css') }}" />
-  </head>
-  <body>
 
       <!-- Modal -->
       <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,23 +24,23 @@
       </div>
 
     <!-- Navbar -->
-    <nav class="fixed-top navbar">
+    <nav class="navbar sticky-top">
       <div class="container-fluid bg-white ">
         <div class="container p-3 ">
         <div class="row d-flex justify-content-between">
           <div class="col-3">
-            <a class="navbar-brand fw-bold" href="/">
+            <a class="navbar-brand" href="/">
               <img
-                src="{{ asset('assets/img/landing-page/LOGO WE LANCER.svg') }}"
+                src="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}"
                 alt="Welancer"
                 height="40"
                 />
             </a>
           </div>
           <div class="col-5 d-flex justify-content-center mt-2">
-            <div class="col-3 "><a class="nav__item {{ Request::is('/') ? 'active' : '' }}" href="/" class="home">Home</a></div>
-            <div class="col-3 "><a class="nav__item {{ Request::is('find-work') ? 'active' : '' }}" href="{{ route('find.Work') }}">Find Work</a></div>
-            <div class="col-3 "><a class="nav__item {{ Request::is('find-freelancers') ? 'active' : '' }}" href="{{ route('find.freelance') }}">Find Freelance</a></div>
+            <div class="col-3 "><a href="/" class="home">Home</a></div>
+            <div class="col-3 "><a href="{{ route('find.Work') }}">Find Work</a></div>
+            <div class="col-3 "><a href="{{ route('find.freelance') }}">Find Freelance</a></div>
           </div>
           <div class="col-3 d-flex justify-content-end">
               @auth
@@ -73,31 +53,21 @@
                     <li><hr class="dropdown-divider"></li>
                     @can('isAdmin')
                       <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>                     
-                      @endcan
+                    @endcan
                       <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
-                    </ul>
-                  </div>
-                  @endauth
-                  @guest
+                  </ul>
+              </div>
+              @endauth
+              @guest
                   <a href="/login" class="btn btn-primary btn-login me-2 ">
                     Login
                   </a>
                   <a href="/register" class="btn btn-outline-primary btn-register">
                     Register
                   </a>
-                  @endguest  
-                </div>
-              </div>
+              @endguest  
+            </div>
+         </div>
       </div>
     </div>
   </nav>
-    @yield('main')
-    <!-- End of Navbar -->
-    @include('layouts.footer')
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>

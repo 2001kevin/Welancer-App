@@ -22,10 +22,6 @@ Route::get('/', function () {
     return view('landing-page', ['title' => 'Home']);
 });
 
-Route::get('/find-freelancer', function () {
-    return view('find-freelancer', ['title' => 'Find Freelancer']);
-});
-
 Route::get('/find-work', [WorkController::class, 'pageWork'])->name('find.Work');
 
 Route::get('/login', [UserController::class, 'login'])->name('login');
@@ -43,6 +39,7 @@ Route::get('/admin/dashboard/freelancer/create', [FreelanceController::class, 'c
 Route::post('/admin/dashboard/freelancer/store', [FreelanceController::class, 'storeFreelance'])->name('admin.dashboard.freelance.store');
 Route::post('/admin/dashboard/freelancer/update/{id}', [FreelanceController::class, 'updateFreelance'])->name('admin.dashboard.freelance.update');
 Route::post('/admin/dashboard/freelancer/delete/{freelance}', [FreelanceController::class, 'deleteFreelance'])->name('admin.dashboard.freelance.delete');
+Route::get('/find-freelancers', [FreelanceController::class, 'indexFindFreelance'])->name('find.freelance');
 Route::get('/find-freelancer', [FreelanceController::class, 'findFreelance'])->name('find-freelancer');
 
 
@@ -51,5 +48,6 @@ Route::get('/admin/work/create', [WorkController::class, 'createWork'])->name('a
 Route::post('/admin/work/store', [WorkController::class, 'storeWork'])->name('admin.work.store');
 Route::post('/admin/work/update/{work}', [WorkController::class, 'updateWork'])->name('admin.work.update');
 Route::post('/amdin/work/delete/{work}', [WorkController::class, 'deleteWork'])->name('admin.work.delete');
+Route::get('/find/work', [WorkController::class, 'findWork'])->name('find.works');
 
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');

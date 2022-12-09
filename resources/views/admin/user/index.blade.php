@@ -88,7 +88,7 @@
                  <div class="container">
                      <div class="row justify-content-center">
                          <div class="col-md-10">
-                             <div class="card mb-4 mx-4 mt-4">
+                             <div class="card mb-4 mx-4 mt-4 border-0 shadow">
                              <img src="{{ asset('assets/img/global/cover2.svg') }}" style="border-top-left-radius: 13px; border-top-right-radius: 15px;" class="card-img-top d-none d-lg-block"  alt="Backgorund Image">
                                  <div class="card-body py-5 px-5">
                                      <div class="text-center">

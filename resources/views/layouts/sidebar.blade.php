@@ -61,7 +61,7 @@
                     </button>
                 </a>
 
-                <h5 class="sidebar-title">Daily Use</h5>
+                <h5 class="sidebar-title">Admin</h5>
 
                 <a href="{{ route('admin.dashboard') }}" class="sidebar-item 
                     {{ Request::is('admin/dashboard') ? 'active' : ''  }}" onclick="toggleActive(this)">

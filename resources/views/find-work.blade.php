@@ -1,47 +1,63 @@
 @extends('layouts.navbar')
 @section('main')
-    <article class="postcard light blue">
+<div class="container-fluid jumbotron-find-freelance">
+    <div class="container mt-4">
+        <div class="row d-flex justify-content-between">
+            <div class="col-7 freelancer-title">
+                <h1 style="color: black">Find <span style="color: #4640de">Freelancers</span></h1>
+                <h2 class="jumbotron-text">Your Worker</h2>
+                <form action="{{ route('find.works') }}" method="GET">
+					<div
+						class="row bg-white d-flex align-items-center rounded justify-content-between shadow-sm p-2 mt-4 mb-3 ms-1"
+					>
+					
+							<input
+								class="col-11 border border-0 jumbotron-input fs-5"
+								type="text"
+								placeholder="Search work"
+								name="keyword"
+							/>
+							<button
+								type="submit"
+								class="btn btn-primary col-1 rounded-circle search-button"
+							>
+								<img
+									src="{{ asset('assets/img/find-freelancer/image 5.svg') }}"
+									alt=""
+								/>
+								
+							</button>
+					</div>
+                </form>
+            </div>
+            <div class="col-4 freelancer-cover">
+                <img src="{{ asset('assets/img/find-freelancer/Other 13.svg') }}" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Jumbotron Find Freelance -->
+ @foreach ($works as $work)
+	 <article class="postcard light blue mt-5">
 			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+				<img class="postcard__img" src="{{ url('photos') }}/{{ $work->photo }}" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+				<h1 class="postcard__title blue"><a href="#">{{ $work->project_name }}</a></h1>
 				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					<time>
+						<i class="fas fa-calendar-alt mr-2 me-2"></i>{{ $work->created_at }}
 					</time>
 				</div>
 				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<h4>Project Description</h4>
+				<div class="postcard__preview-txt">{{ $work->project_description }}</div>
+				<h4 class="mt-3">Client Review</h4>
+				<div class="postcard__preview-txt">{{ $work->client_review }}</div>
 				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-					<li class="tag__item play blue">
-						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-					</li>
+					<li class="tag__item"><i class="fa-solid fa-pen me-2"></i>{{ $work->client_name }}</li>
 				</ul>
 			</div>
-		</article>
-		<article class="postcard light red">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-					<li class="tag__item play red">
-						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-					</li>
-				</ul>
-			</div>
-		</article>
+		</article> 
+ @endforeach
 @endsection

@@ -7,15 +7,31 @@ body {
 }
  a{
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 500;
   /* background-color: #4640de ; */
+}
+
+.nav__item:hover{
+  text-decoration: none;
+  color: #4640de;
+}
+
+.nav__item.active{
+  color: #4640de;
+}
+
+.text-end{
+  color: black;
 }
 
 .btn-register {
   border: 1px solid #4640de;
 }
 
+.navbar-brand{
+  font-weight: 500px;
+}
 
 .jumbotron-freelance {
   width: 100%;
@@ -24,6 +40,7 @@ body {
 
 .jumbotron-title {
   line-height: 4rem;
+  color: black;
   margin-top: 20px;
 }
 
@@ -66,6 +83,10 @@ body {
   color: #9d9d9d;
 }
 
+.latest-title{
+  color: black;
+}
+
 .latest-title span {
   color: #4640de;
 }
@@ -83,6 +104,10 @@ body {
     color: #4640de;
     display: block;
     margin-top: 10px;
+}
+
+.category-title{
+  color: black;
 }
 
 .category-title span {
@@ -108,10 +133,31 @@ body {
 .portofolios-type {
   color: #9d9d9d;
 }
+
+.portofolios-checkout{
+  color: black;
+}
+
 .portofolios-checkout span {
   color: #4640de;
 }
 
+.desc-footer{
+  color: black;
+}
+
+.footer-title{
+  color: black;
+}
+
+.footer-contact{
+  color: black;
+}
+
 footer {
   font-size: 14px;
+}
+
+@media (min-width: 320px) {
+  
 }

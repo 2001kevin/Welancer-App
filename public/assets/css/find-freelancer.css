@@ -73,7 +73,7 @@ a {
   height: 100px;
 }
 .freelance-city {
-  color: #9d9d9d;
+  color: #000000;
 }
 .vector-right {
   background-color: #4640de;
@@ -101,3 +101,4 @@ a {
 .for-freelance a:hover {
   color: #4640de;
 }
+

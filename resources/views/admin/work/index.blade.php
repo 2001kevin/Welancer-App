@@ -26,9 +26,9 @@
                   <th scope="row">{{ $loop->index+1 }}</th>
                   <td>{{ $work->project_name }}</td>
                   <td>{{ $work->freelance->name }}</td>
-                  <td>{{ $work->project_description }}</td>
+                  <td>{{ Str::limit($work->project_description, 10) }}</td>
                   <td>{{ $work->client_name }}</td>
-                  <td>{{ $work->client_review }}</td>
+                  <td>{{ Str::limit($work->client_review, 10) }}</td>
                   <td>
                     <button class="button-edit" data-bs-toggle="modal" data-bs-target="#updateFreelancer-{{ $work->work_id }}"><i class="fas fa-pencil-alt"></i></button>
                     <button class="button-delete"><i class="fas fa-times" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $work->work_id }}"></i></button>

@@ -11,7 +11,8 @@ class WorkController extends Controller
 {
     public function pageWork(){
         $data['title'] = 'Find Work';
-        return view('find-work', $data);
+        $works = DB::table('works')->get();
+        return view('find-work', $data, compact('works'));
     }
     public function indexWork(){
         $data['title'] = 'Dashboard';
@@ -87,5 +88,12 @@ class WorkController extends Controller
     public function deleteWork(work $work){
         DB::table('works')->where('work_id', $work->work_id)->delete();
         return back();
+    }
+
+     public function findWork(Request $request){
+        $data['title'] = 'Find Work';
+        $keyword = $request->keyword;
+        $works = work::where('project_name', 'LIKE', '%' . $keyword. '%')->get();
+        return view('find-work', $data, compact('works'));
     }
 }
