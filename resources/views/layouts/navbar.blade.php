@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/find-freelancer.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/find-work.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
   </head>
   <body>
 
@@ -32,7 +33,7 @@
               />
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body text-start" style="color: black">
               Are you sure want to logout?
             </div>
             <div class="modal-footer">
@@ -45,52 +46,57 @@
 
     <!-- Navbar -->
     <nav class="fixed-top navbar">
-      <div class="container-fluid bg-white ">
-        <div class="container p-3 ">
-        <div class="row d-flex justify-content-between">
-          <div class="col-3">
-            <a class="navbar-brand fw-bold" href="/">
-              <img
-                src="{{ asset('assets/img/landing-page/LOGO WE LANCER.svg') }}"
-                alt="Welancer"
-                height="40"
-                />
-            </a>
-          </div>
-          <div class="col-5 d-flex justify-content-center mt-2">
-            <div class="col-3 "><a class="nav__item {{ Request::is('/') ? 'active' : '' }}" href="/" class="home">Home</a></div>
-            <div class="col-3 "><a class="nav__item {{ Request::is('find-work') ? 'active' : '' }}" href="{{ route('find.Work') }}">Find Work</a></div>
-            <div class="col-3 "><a class="nav__item {{ Request::is('find-freelancers') ? 'active' : '' }}" href="{{ route('find.freelance') }}">Find Freelance</a></div>
-          </div>
-          <div class="col-3 d-flex justify-content-end">
-              @auth
-              <div class="dropdown">
-                  <button class="btn-user dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><span class="dropdown-item-text"> <b> Welcome, {{ Auth::user()->username }}</b></span></li>
-                    <li><hr class="dropdown-divider"></li>
-                    @can('isAdmin')
+      <div class="container-fluid bg-white">
+        <div class="container p-2">
+          <div class="row navbar-expand-lg d-flex justify-content-between">
+            <div class="col-3">
+              <a class="navbar-brand fw-bold" href="/">
+                <img
+                  src="{{ asset('assets/img/landing-page/LOGO WE LANCER.svg') }}"
+                  alt="Welancer"
+                  height="40"
+                  />
+              </a>
+            </div>
+            <button class="col-2 navbar-toggler" style="border:none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="col-lg-6 navbar-nav d-flex justify-content-center">
+                <div class="mx-5"><a class="nav__item {{ Request::is('/') ? 'active' : '' }}" href="/" class="home">Home</a></div>
+                <div class="mx-5"><a class="nav__item {{ Request::is('find-work') ? 'active' : '' }}" href="{{ route('find.Work') }}">Find Work</a></div>
+                <div class="mx-5"><a class="nav__item {{ Request::is('find-freelancers') ? 'active' : '' }}" href="{{ route('find.freelance') }}">Find Freelance</a></div>
+              </div>
+              <div class="col-lg-3 navbar-dropdown">
+                @auth
+                <div class="navbar coldropdown">
+                    <button class="btn-user dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><span class="dropdown-item-text"> <b> Welcome, {{ Auth::user()->username }}</b></span></li>
+                      <li><hr class="dropdown-divider"></li>
+                      @can('isAdmin')
                       <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>                     
                       @endcan
                       <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
                     </ul>
-                  </div>
-                  @endauth
-                  @guest
-                  <a href="/login" class="btn btn-primary btn-login me-2 ">
-                    Login
-                  </a>
-                  <a href="/register" class="btn btn-outline-primary btn-register">
-                    Register
-                  </a>
-                  @endguest  
                 </div>
+                @endauth
+                @guest
+                <a href="/login" class="btn btn-primary btn-login me-2 ">
+                  Login
+                </a>
+                <a href="/register" class="btn btn-outline-primary btn-register">
+                  Register
+                </a>
+                @endguest  
               </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     @yield('main')
     <!-- End of Navbar -->
     @include('layouts.footer')

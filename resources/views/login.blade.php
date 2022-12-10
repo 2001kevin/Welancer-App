@@ -1,16 +1,16 @@
 @extends('layouts.navbar')
 @section('main')
-    
+    <br><br>
     <div class="login bg-light min-vh-100 d-flex flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-6 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 d-none d-lg-block">
                                 <img src="./assets/img/global/cover1.svg" class="img-fluid rounded-start" alt="welancer">
                             </div>
-                            <div class="col-md-6 align-self-center">
+                            <div class="col-md-12 col-lg-6 align-self-center">
                                 <div class="card-body pt-5">
                                     <div class="header">
                                         <h1>Login</h1>
