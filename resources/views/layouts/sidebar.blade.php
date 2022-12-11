@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="dicoding:email" content="salputri28@gmail.com/>
     <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
