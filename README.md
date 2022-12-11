@@ -13,4 +13,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Dokumen Penggunaan Aplikasi Welancer
 
-https://drive.google.com/file/d/15EWLkpP7SmdAgli_NFSFrwpoP9RFbQwT/view?usp=drivesdk
+https://drive.google.com/file/d/1wzfLLxpgbSW4XnjxBi23ZvKhgL5IhB2j/view?usp=drivesdk
