@@ -5,24 +5,24 @@
     <div class="container-fluid jumbotron-freelance">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 mt-5">
+          <div class="col-7 mt-5">
             <div class="row mt-5">
-              <div class="col-12">
+              <div class="col-lg-8 col-md-12">
                 <h1 class="fw-bold jumbotron-title">
                   Are you looking for Freelancers?
                 </h1>
               </div>
             </div>
             <div class="row">
-              <div class="col-8">
+              <div class="col-lg-8 col-md-12">
                 <p class="jumbotron-description">
                   Hire Great Freelancers, Fast. Spacelance helps you hire elite
                   freelancers at a moment's notice
                 </p>
               </div>
             </div>
-            <div class="row mt-5">
-              <div class="col-6 col-md-4">
+            <div class="row mt-2">
+              <div class="col-6 col-sm-8">
                 <a
                   type="button"
                   class="btn btn-primary me-2 btn-hire fw-bold p-2"
@@ -33,7 +33,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-none col-md-6">
+          <div class="col-5 jumbotron-image">
             <img
               src="./assets/img/landing-page/Working remotely.svg"
               alt="Freelance"
@@ -49,7 +49,7 @@
     <div class="container bg-white p-3 rounded shadow-sm">
       <div class="row d-flex justify-content-between p-3">
         <div class="col-12 col-md-4">
-          <div class="row">
+          <div class="row procedure-image">
             <img
               src="./assets/img/landing-page/Lock.svg"
               alt="lock"
@@ -57,7 +57,7 @@
             />
           </div>
           <div class="row">
-            <h4 class="text-center mt-2">Create Account</h4>
+            <h4 class="card-title text-center mt-2">Create Account</h4>
           </div>
           <div class="row d-flex justify-content-center">
             <div class="col-8">
@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="row">
+          <div class="row procedure-image">
             <img
               src="./assets/img/landing-page/Document.svg"
               alt="lock"
@@ -76,7 +76,7 @@
             />
           </div>
           <div class="row">
-            <h4 class="text-center mt-2">Search work</h4>
+            <h4 class="card-title text-center mt-2">Search work</h4>
           </div>
           <div class="row d-flex justify-content-center">
             <div class="col-8">
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="row">
+          <div class="row procedure-image">
             <img
               src="./assets/img/landing-page/protect.svg"
               alt="lock"
@@ -95,7 +95,7 @@
             />
           </div>
           <div class="row">
-            <h4 class="text-center mt-2">Save and apply</h4>
+            <h4 class="card-title text-center mt-2">Save and apply</h4>
           </div>
           <div class="row d-flex justify-content-center">
             <div class="col-8">
@@ -111,7 +111,7 @@
 
     <!-- Offering -->
     <div class="container mt-5">
-      <div class="row d-flex justify-content-between pt-5">
+      <div class="row d-flex justify-content-between">
         <div class="col-8">
           <img class="offering-image"
             src="./assets/img/landing-page/offer.svg"
@@ -145,7 +145,7 @@
     <!-- Latest Freelance Work -->
     <div class="container mt-5">
       <div class="row d-flex justify-content-between pt-5">
-        <div class="col-12 col-md-6">
+        <div class="col-8">
           <div class="row">
             <h3 class="latest-description">The latest freelance work!</h3>
           </div>
@@ -153,22 +153,22 @@
             <h1 class="latest-title">Recently Posted <span>Works</span></h1>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="row d-flex justify-content-end">
-            <div class="col-1 me-3">
+        <div class="col-4">
+          <div class="row d-flex justify-content-center">
+            <div class="col-1 arrow-mark me-3">
               <button
                 type="button"
                 class="btn btn-light bg-white rounded-circle p-3 shadow-sm"
               >
-                <img src="./assets/img/landing-page/Vector-left.svg" alt="" />
+                <img src="./assets/img/landing-page/Vector-left.svg" alt=""/>
               </button>
             </div>
-            <div class="col-1">
+            <div class="col-1 arrow-mark">
               <button
                 type="button"
                 class="btn btn-light vector-right rounded-circle p-3 shadow-sm"
               >
-                <img src="./assets/img/landing-page/Vector-right.svg" alt="" />
+                <img src="./assets/img/landing-page/Vector-right.svg" alt=""/>
               </button>
             </div>
           </div>
@@ -180,7 +180,7 @@
     <!-- Card Product -->
     <div class="container mt-5">
       <div class="row">
-        <div class="text-center col-12 col-md-3">
+        <div class="text-center col-12 col-md-3 d-flex justify-content-center mb-2">
           <div
             class="card shadow-sm border border-0 p-2 rounded-3"
             style="width: 18rem"
@@ -208,7 +208,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center col-12 col-md-3">
+        <div class="text-center col-12 col-md-3 d-flex justify-content-center mb-2">
           <div
             class="card shadow-sm border border-0 p-2 rounded-3"
             style="width: 18rem"
@@ -236,7 +236,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center col-12 col-md-3">
+        <div class="text-center col-12 col-md-3 d-flex justify-content-center mb-2">
           <div
             class="card shadow-sm border border-0 p-2 rounded-3"
             style="width: 18rem"
@@ -264,7 +264,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center col-12 col-md-3">
+        <div class="text-center col-12 col-md-3 d-flex justify-content-center mb-2">
           <div
             class="card shadow-sm border border-0 p-2 rounded-3"
             style="width: 18rem"
@@ -303,9 +303,9 @@
       </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-3">
       <div class="row">
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/graphic-design-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Graphic Design</p>
           <!-- <img
@@ -314,7 +314,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img
             src="./assets/img/landing-page/cartoon-animation-img.svg"
             alt=""
@@ -323,7 +323,7 @@
             Cartoon Animation
           </p>
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/ilustration-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Illustrationn</p>
           <!-- <img
@@ -332,7 +332,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/Flyers-vouchers-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">
             Flyers & Vouchers
@@ -343,7 +343,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/logo-design-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Logo Design</p>
           <!-- <img
@@ -352,7 +352,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/social-graphics-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Social Graphics</p>
           <!-- <img
@@ -361,7 +361,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/article-writing-img.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Article Writing</p>
           <!-- <img
@@ -370,7 +370,7 @@
             alt=""
           /> -->
         </div>
-        <div class="col-6 col-md-3 background-category mt-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12 background-category mt-3">
           <img src="./assets/img/landing-page/video-editing-image.svg" alt="" />
           <p class="text-center category-freelance fw-bold">Video Editing</p>
           <!-- <img
@@ -380,7 +380,7 @@
           /> -->
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="row mt-3">
         <div class="col-12 col-md-4 d-flex justify-content-center mx-auto">
           <button
             type="button"
@@ -394,7 +394,7 @@
 
     <!-- Portofolios -->
     <div class="container mt-5 text-center">
-      <div class="row">
+      <div class="row pt-5">
         <h3 class="portofolios-type">Logos, websites, book covers & more!</h3>
       </div>
       <div class="row">
@@ -402,7 +402,7 @@
       </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-2">
       <div class="row">
         <div class="col-12 col-md-4">
           <div class="card shadow-sm border border-0 p-2 rounded-2">

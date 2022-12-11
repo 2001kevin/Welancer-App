@@ -2,9 +2,10 @@
 @section('main')
 <!-- Jumbotron Find Freelance -->
 <div class="container-fluid jumbotron-find-freelance">
+    <br><br><br><br>
     <div class="container mt-4">
         <div class="row d-flex justify-content-between">
-            <div class="col-7 freelancer-title">
+            <div class="col-lg-8 col-sm-12 freelancer-title">
                 <h1 style="color: black">Find <span style="color: #4640de">Freelancers</span></h1>
                 <h2 class="jumbotron-text">Your Worker</h2>
                 <form action="/find-freelancer" method="GET">
@@ -13,17 +14,17 @@
                     >
                     
                             <input
-                                class="col-11 border border-0 jumbotron-input fs-5"
-                                type="text"
-                                placeholder="Search Freelance"
-                                name="keyword"
+                            class="col-9 border-0 jumbotron-input fs-5"
+                            type="text"
+                            placeholder="Search Freelancer"
+                            name="keyword"
                             />
                             <button
                                 type="submit"
-                                class="btn btn-primary col-1 rounded-circle search-button"
+                                class="btn btn-primary col-3 rounded-circle search-button"
                             >
                                 <img
-                                    src="./assets/img/find-freelancer/image 5.svg"
+                                    src="{{ asset('assets/img/find-freelancer/image 5.svg') }}"
                                     alt=""
                                 />
                                 
@@ -31,7 +32,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-4 freelancer-cover">
+            <div class="col-lg-4 freelancer-cover">
                 <img src="./assets/img/find-freelancer/Other 13.svg" alt="" />
             </div>
         </div>
@@ -41,7 +42,7 @@
 
 <!-- Card Freelancer -->
 @foreach($freelancers as $fr)
-<div class="container">
+<div class="container mt-5">
     <div class="row mb-5">
         <div class="col-10 mx-auto">
             <div class="card border border-0 shadow-sm">
@@ -139,7 +140,7 @@
     <div class="row">
         <div class="col-12">
             <div class="row d-flex justify-content-center">
-                <div class="col-1">
+                <div class="col-1 me-5">
                     {{-- {{$freelancers->links()}} --}}
                     <button
                         type="button"

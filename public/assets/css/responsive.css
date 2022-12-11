@@ -1,0 +1,145 @@
+@media screen and (max-width: 992px){
+    .btn-register {
+        display: none;
+    }
+    .jumbotron-image img {
+        margin-top: 80px;
+        width: 400px;
+    }
+    .freelancer-cover img {
+        display: none;
+    }
+    .desc-footer {
+        display: none;
+    }
+    .footer-title {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .second-footer {
+        font-size: 12px;
+    }
+    .call-us a, .for-freelance a, .for-customer a {
+        font-size: 13px;
+    }
+    .call-us {
+        line-height: 10px;
+    }
+    .navbar-dropdown {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 922px){
+    .jumbotron-title {
+        line-height: 40px;
+    }
+    .jumbotron-description {
+        line-height: 20px;
+    }
+    .btn-hire {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .footer-title {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .jumbotron-title {
+        font-size: 25px;
+    }
+    .jumbotron-description {
+        font-size: 15px;
+    }
+    .jumbotron-image img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .card-title {
+        font-size: 18px;
+    }
+    .procedure-text {
+        font-size: 15px;
+    }
+    .offer-title {
+        line-height: 35px;
+    }
+    .offer-description {
+        line-height: 20px;
+        font-size: 15px;
+    }
+    .latest-description {
+        font-size: 20px;
+    }
+    .latest-title {
+        font-size: 25px;
+    }
+    .arrow-mark img {
+        width: 15px;
+    }
+    .freelance-bookmark {
+        display: none;
+    }
+    .freelance-city {
+        font-size: 15px;
+    }
+    .freelance-category {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .btn-hire {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .jumbotron-title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .jumbotron-description {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .btn-hire {
+        font-size: 10px;
+    }
+    .card-title {
+        font-size: 15px;
+    }
+    .procedure-text {
+        font-size: 12px;
+    }
+    .procedure-image img {
+        height: 80px;
+    }
+    .latest-description {
+        font-size: 15px;
+    }
+    .latest-title {
+        font-size: 20px;
+    }
+    .category-title {
+        font-size: 25px;
+    }
+    .portofolios-type {
+        font-size: 18px;
+    }
+    .portofolios-checkout {
+        font-size: 23px;
+    }
+    .freelancer-title h1{
+        font-size: 25px;
+    }
+    .jumbotron-text {
+        font-size: 18px;
+    }
+}

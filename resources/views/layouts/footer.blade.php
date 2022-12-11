@@ -4,11 +4,11 @@
       <div class="first-footer container-fluid bg-white mt-5">
         <div class="container pt-5">
           <div class="footer-info row d-flex justify-content-around">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12">
               <div class="row mb-3">
                 <a class="navbar-brand" href="#">
                   <img
-                    src="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}"
+                    src="{{ asset('assets/img/landing-page/LOGO WE LANCER.svg') }}"
                     alt="Welancer"
                     height="40"
                   />
@@ -41,18 +41,18 @@
                 </button>
               </div>
             </div>
-            <div class="col-2 d-flex flex-column for-customer">
-                <h5 class="mb-4 footer-title">Customers</h5>
+            <div class="col-lg-2 col-sm-6 d-flex flex-column for-customer">
+                <h5 class="footer-title">Customers</h5>
                 <a href="#">Find Freelancers</a>
                 <a href="#">Post Project</a>
             </div>
-            <div class="col-2 d-flex flex-column for-freelance">
-                <h5 class="mb-4 footer-title">Freelance</h5>
+            <div class="col-lg-2 col-sm-6  d-flex flex-column for-freelance">
+                <h5 class="footer-title">Freelance</h5>
                 <a href="#">Find Work</a>
                 <a href="#">Create Account</a>
             </div>
-            <div class="col-2 d-flex flex-column call-us">
-                <h5 class="mb-4 footer-title">Call Us</h5>
+            <div class="col-lg-2 col-sm-12 d-flex flex-column call-us">
+                <h5 class="footer-title">Call Us</h5>
                 <div class="row">
                   <div class="col-1">
                     <img

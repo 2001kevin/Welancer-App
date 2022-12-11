@@ -1,10 +1,11 @@
 @extends('layouts.navbar')
 @section('main')
 <div class="container-fluid jumbotron-find-freelance">
+	<br><br><br><br>
     <div class="container mt-4">
         <div class="row d-flex justify-content-between">
-            <div class="col-7 freelancer-title">
-                <h1 style="color: black">Find <span style="color: #4640de">Freelancers</span></h1>
+            <div class="col-lg-8 col-sm-12 freelancer-title">
+                <h1 style="color: black">Find <span style="color: #4640de">Work</span></h1>
                 <h2 class="jumbotron-text">Your Worker</h2>
                 <form action="{{ route('find.works') }}" method="GET">
 					<div
@@ -12,14 +13,14 @@
 					>
 					
 							<input
-								class="col-11 border border-0 jumbotron-input fs-5"
+								class="col-9 border-0 jumbotron-input fs-5"
 								type="text"
-								placeholder="Search work"
+								placeholder="Search Work"
 								name="keyword"
 							/>
 							<button
 								type="submit"
-								class="btn btn-primary col-1 rounded-circle search-button"
+								class="btn btn-primary col-3 rounded-circle search-button"
 							>
 								<img
 									src="{{ asset('assets/img/find-freelancer/image 5.svg') }}"
@@ -30,7 +31,7 @@
 					</div>
                 </form>
             </div>
-            <div class="col-4 freelancer-cover">
+            <div class="col-lg-4 freelancer-cover">
                 <img src="{{ asset('assets/img/find-freelancer/Other 13.svg') }}" alt="" />
             </div>
         </div>

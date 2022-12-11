@@ -1,14 +1,15 @@
 @extends('layouts.navbar')
 @section('main')
+    <br><br>
     <div class="register bg-light min-vh-100 d-flex flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-10 col-lg-8">
                     <div class="card mb-4 mx-4 mt-4">
                         <img src="{{ asset('assets/img/global/cover2.svg') }}" style="border-top-left-radius: 13px; border-top-right-radius: 15px;" class="card-img-top d-none d-lg-block"  alt="Backgorund Image">
                         <div class="card-body py-5 px-5">
-                            <div class="text-center">
-                                <h1><strong>Sign Up</strong></h1>
+                            <div class="header text-center">
+                                <h1>Sign Up</h1>
                             </div>
                             @if($errors->any())
                                 @foreach($errors->all() as $err)
