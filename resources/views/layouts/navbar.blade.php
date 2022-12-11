@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dicoding:email" content="salputri28@gmail.com/>
     <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
     <title>Welancer | {{ $title }}</title>
     <link
