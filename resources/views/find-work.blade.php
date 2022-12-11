@@ -40,7 +40,7 @@
  @foreach ($works as $work)
 	 <article class="postcard light blue mt-5">
 			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="{{ url('photos') }}/{{ $work->photo }}" alt="Image Title" />
+				<img class="postcard__img" src="./photos/{{ $work->photo }}" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
 				<h1 class="postcard__title blue"><a href="#">{{ $work->project_name }}</a></h1>

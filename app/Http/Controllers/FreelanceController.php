@@ -50,7 +50,6 @@ class FreelanceController extends Controller
             'instagram' => $request->instagram,
             'photo' => $photoName,
         ]);
-        dd($request->all());
         return redirect('admin/dashboard/freelancer');
     }
 
