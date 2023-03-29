@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -51,6 +51,7 @@ class UserController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
+        
          return back()->withErrors([
             'password' => 'Wrong email or password',
         ]);

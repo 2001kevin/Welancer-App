@@ -29,6 +29,10 @@ body {
   border: 1px solid #4640de;
 }
 
+.navbar{
+  top: 0;
+}
+
 .navbar-brand{
   font-weight: 500px;
 }

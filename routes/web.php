@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\FreelanceController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
@@ -24,15 +26,23 @@ Route::get('/', function () {
 
 Route::get('/find-work', [WorkController::class, 'pageWork'])->name('find.Work');
 
+// Login
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'login_action'])->name('login.action');
 
+// Register
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'register_action'])->name('register.action');
 
+// Edit User
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 Route::get('/admin/user', [AdminController::class, 'indexUser'])->name('admin.indexUser');
 Route::post('/admin/update/{user}', [AdminController::class, 'updateUser'])->name('admin.update');
+
+//Chat
+Route::get('/chat', [MessageController::class, 'index'])->name('chat');
+Route::get('/chats', [MessageController::class, 'fetchMessage'])->name('fetchMessages');
+Route::post('/chats', [MessageController::class, 'sendMessage'])->name('sendMessage');
 
 Route::get('/admin/dashboard/freelancer', [FreelanceController::class, 'indexFreelance'])->name('admin.dashboard.freelance');
 Route::get('/admin/dashboard/freelancer/create', [FreelanceController::class, 'createFreelance'])->name('admin.dashboard.freelance.create');

@@ -10,18 +10,18 @@ class AdminController extends Controller
 {
     public function dashboard(){
         $data['title'] = 'Dashboard';
-        $works = DB::table('works')->get();
-        $freelancers = DB::table('freelances')->get();
+        // $works = DB::table('works')->get();
+        // $freelancers = DB::table('freelances')->get();
+        // $worksCount = DB::table('works')->count();
         $usersCount = DB::table('users')->count();
-        $worksCount = DB::table('works')->count();
-        $freelancersCount = DB::table('freelances')->count();       
+        // $freelancersCount = DB::table('freelances')->count();       
         return view('admin.dashboard', $data, 
             compact(
                 'usersCount', 
-                'worksCount', 
-                'freelancersCount',
-                'works',
-                'freelancers'
+                // 'worksCount', 
+                // 'freelancersCount',
+                // 'works',
+                // 'freelancers'
             ));
     }
 

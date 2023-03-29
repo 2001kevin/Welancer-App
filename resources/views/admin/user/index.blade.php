@@ -1,3 +1,4 @@
+
 @extends('layouts.sidebar')
 @section('main')
 <div class="nav">
@@ -79,12 +80,11 @@
                <div class="modal-header">
                  <div class="d-flex align-items-center">
                      <img src="{{ asset('assets/img/global/logo.svg') }}" alt="Welancer">
-                     <span class="title-welancer ms-3">Welancer </span>
-                     
+                     <span class="title-welancer ms-3">Welancer </span>   
                  </div>
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
                </div>
-                 
+                
                  <div class="container">
                      <div class="row justify-content-center">
                          <div class="col-md-10">

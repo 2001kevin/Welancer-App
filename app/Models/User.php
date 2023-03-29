@@ -19,19 +19,18 @@ class User extends Authenticatable
      */
 
     protected $table = 'users';
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'username',
+        'name',
+        'alamat',
         'email',
         'password',
         'role',
     ];
 
-    public function freelance(){
-        return $this->hasMany(freelance::class);
+    public function messages(){
+        return $this->hasMany(message::class);
     }
 
     /**

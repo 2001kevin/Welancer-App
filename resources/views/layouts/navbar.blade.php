@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="dicoding:email" content="kevinlambok@outlook.com">
     <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
     <title>Welancer | {{ $title }}</title>
     <link
@@ -45,8 +46,8 @@
       </div>
 
     <!-- Navbar -->
-    <nav class="fixed-top navbar">
-      <div class="container-fluid bg-white">
+    <nav class="fixed-top">
+      <div class="container-fluid bg-white p-2">
         <div class="container p-2">
           <div class="row navbar-expand-lg d-flex justify-content-between">
             <div class="col-3">
@@ -74,12 +75,12 @@
                       <i class="fa fa-user-circle" aria-hidden="true"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><span class="dropdown-item-text"> <b> Welcome, {{ Auth::user()->username }}</b></span></li>
+                      <li><span class="dropdown-item-text"><b>Welcome, {{ Auth::user()->name }}</b></span></li>
                       <li><hr class="dropdown-divider"></li>
-                      @can('isAdmin')
-                      <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>                     
+                      @can('isSuperAdmin')
+                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>                     
                       @endcan
-                      <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
                     </ul>
                 </div>
                 @endauth

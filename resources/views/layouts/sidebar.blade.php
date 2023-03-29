@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="dicoding:email" content="kevinlambok@outlook.com">
     <link href="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}" rel="icon" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
@@ -133,6 +134,22 @@
             </svg>
 
             <span>Data User</span>
+          </a>
+
+          <a href="{{ route('chat') }}" class="sidebar-item {{ Request::is('chat') ? 'active' : '' }}" onclick="toggleActive(this)">
+            <!-- <img src="./assets/img/global/dollar-sign.svg" alt=""> -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                stroke="#ABB3C4"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M9 22V12H15V22" stroke="#ABB3C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span>Chat</span>
           </a>
 
                 <a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal" class="sidebar-item" onclick="toggleActive(this)">

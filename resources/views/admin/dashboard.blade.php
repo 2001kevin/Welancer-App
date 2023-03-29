@@ -36,7 +36,7 @@
                                 <div class="d-flex flex-column justify-content-between align-items-start">
                                     <h5 class="content-desc">Works</h5>
 
-                                    <h3 class="statistics-value">{{ $worksCount }}</h3>
+                                    {{-- <h3 class="statistics-value">{{ $worksCount }}</h3> --}}
                                 </div>
 
                             </div>
@@ -59,7 +59,7 @@
                                 <div class="d-flex flex-column justify-content-between align-items-start">
                                     <h5 class="content-desc">Freelancers</h5>
 
-                                    <h3 class="statistics-value">{{ $freelancersCount }}</h3>
+                                    {{-- <h3 class="statistics-value">{{ $freelancersCount }}</h3> --}}
                                 </div>
 
                               
@@ -124,7 +124,7 @@
                     <div class="col-12 col-lg-6">
                         <h2 class="content-title">Freelancers</h2>
                         <h5 class="content-desc mb-4">Freelancers Tracking</h5>
-                        @foreach ($freelancers as $freelancer)
+                        {{-- @foreach ($freelancers as $freelancer)
                             <div class="document-card">
                                 <div class="document-item">
                                     <div class="d-flex justify-content-start align-items-center">
@@ -136,13 +136,13 @@
                                     </div>
                                 </div>
                             </div>                            
-                        @endforeach
+                        @endforeach --}}
                     </div>
 
                     <div class="col-12 col-lg-6">
                         <h2 class="content-title">Works</h2>
                         <h5 class="content-desc mb-4">Works Tracking</h5>
-                        @foreach ($works as $work)
+                        {{-- @foreach ($works as $work)
                             <div class="document-card">
                                 <div class="document-item">
                                     <div class="d-flex justify-content-start align-items-center">
@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                        @endforeach
+                        @endforeach --}}
 
                         </div>
                     </div>

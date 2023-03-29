@@ -1,8 +1,8 @@
 @extends('layouts.navbar')
 @section('main')
     <br><br>
-    <div class="register bg-light min-vh-100 d-flex flex-row align-items-center">
-        <div class="container">
+    <div class="register bg-light min-vh-100 d-flex flex-row align-items-center ">
+        <div class="container p-2">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
                     <div class="card mb-4 mx-4 mt-4">

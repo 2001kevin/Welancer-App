@@ -1,11 +1,11 @@
 <?php
-  
+
 namespace Database\Seeders;
-  
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-  
-class CreateAdminSeeder extends Seeder
+
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,12 +15,11 @@ class CreateAdminSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'first_name' => 'Admin',
-            'last_name' => 'Capstone',
-            'username' => 'C22-042',
-            'email' => 'admin@gmail.com',
+            'name' => 'Super Admin',
+            'alamat' => 'Denpasar City',
+            'email' => 'superadmin@gmail.com',
             'password' => bcrypt('123456'),
-            'role' => 'admin'
+            'role' => 'Super Admin'
         ]);
     }
 }

@@ -15,9 +15,8 @@ class CreateUserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'first_name' => 'User',
-            'last_name' => 'Capstone',
-            'username' => 'user-042',
+            'name' => 'user',
+            'alamat' => 'Denpasar City',
             'email' => 'user@gmail.com',
             'password' => bcrypt('123456'),
             'role' => 'user'
