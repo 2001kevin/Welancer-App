@@ -40,7 +40,7 @@ Route::get('/admin/user', [AdminController::class, 'indexUser'])->name('admin.in
 Route::post('/admin/update/{user}', [AdminController::class, 'updateUser'])->name('admin.update');
 
 //Chat
-Route::get('/chat', [MessageController::class, 'index'])->name('chat');
+Route::get('/chat', [ChatController::class, 'chatPage'])->name('chat');
 Route::get('/chats', [MessageController::class, 'fetchMessage'])->name('fetchMessages');
 Route::post('/chats', [MessageController::class, 'sendMessage'])->name('sendMessage');
 

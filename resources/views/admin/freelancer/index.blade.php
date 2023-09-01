@@ -10,7 +10,7 @@
                     <button class="btn-notif d-block d-md-none"><img src="../assets/img/global/bell.svg" alt=""></button>
                 </div>
 
-            
+
             </div>
       <div class="card border-0 shadow mb-4" style="width: 65rem;">
         <div class="card-body">
@@ -48,7 +48,7 @@
                     <button class="button-edit" data-bs-toggle="modal" data-bs-target="#updateFreelancer-{{ $fr->freelance_id }}"><i class="fas fa-pencil-alt"></i></button>
                     <button class="button-delete"><i class="fas fa-times" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $fr->freelance_id }}"></i></button>
                   </td>
-                </tr>                 
+                </tr>
               @endforeach
             </tbody>
           </table>
@@ -64,11 +64,11 @@
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('assets/img/global/logo.svg') }}" alt="Welancer">
                     <span class="title-welancer ms-3">Welancer </span>
-                    
+
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
               </div>
-                
+
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
@@ -77,7 +77,7 @@
                                 <div class="card-body py-5 px-5">
                                     <div class="text-center">
                                         <h1><strong>Update Data Freelancer</strong></h1>
-                                    </div>      
+                                    </div>
                                     <form action="{{ route('admin.dashboard.freelance.update', $fr->freelance_id ) }}" method="POST" enctype="multipart/form-data" class="row sign-up-form form g-3">
                                       @csrf
                                         <div class="col-md-6">
@@ -125,7 +125,7 @@
                                             <button type="submit" class="button-submit">Submit</button>
                                         </div>
                                     </form>
-        
+
                                 </div>
                             </div>
                         </div>
@@ -135,14 +135,14 @@
           </div>
         </div>
       @endforeach
-      
+
       @foreach ($freelancers as $fr)
           <!-- Modal Delete -->
       <div class="modal fade" id="deleteModal-{{ $fr->freelance_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
                 <img
                 src="{{ asset('assets/img/landing-page/LOGO WE LANCER.png') }}"
                 alt="Welancer"
@@ -162,8 +162,8 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
 
       @endforeach
-      
+
     @endsection
